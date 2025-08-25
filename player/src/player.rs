@@ -1,18 +1,3 @@
-use crate::game::{Cell, Color};
-
-pub struct Player;
-
-impl Player {
-    pub fn new(_: &[[Cell; 16]; 16]) -> Self {
-        Self
-    }
-
-    pub fn play(&mut self, _: &[[Cell; 16]; 16]) -> Color {
-        Color::from_u8(0).unwrap()
-    }
-}
-
-/*
 use std::collections::HashSet;
 
 use crate::game::{Cell, Color};
@@ -74,7 +59,6 @@ fn score_color(board: &[[Cell; 16]; 16], color: Color) -> u32 {
     }
     count
 }
-*/
 
 /* players/rr.wasm
 
