@@ -1,0 +1,12 @@
+package csil:arena;
+
+interface api {
+  resource player {
+    constructor(bytes: list<u8>);
+    play: func(bytes: list<u8>) -> s64;
+  }
+}
+
+world arena-player {
+  export api;
+}
