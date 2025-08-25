@@ -3,10 +3,10 @@
 Seeing what it would look like to use Wasm for CSIL Arena. It's a pretty clean solution,
 but we could only support compiled langauges which excludes Python and JS/TS devs.
 
-## Building a Player
+## Building a Rust Player
 
-In the `player` crate, you can modify `player/src/player.rs` to change your bot's behavior.
-To compile the Wasm module, run
+In the `rust_player` crate, you can modify `player/src/player.rs` to change your bot's
+behavior. To compile the Wasm module, run
 
 ```
 cargo build --target wasm32-wasip2 --release
@@ -14,6 +14,14 @@ cargo build --target wasm32-wasip2 --release
 
 The compiled file is at `target/wasm32-wasip2/release/player.wasm`. Copy this into the
 `runner/players` directory.
+
+## Building a Go Player
+
+In `go_player`, modify `player.go` and compile with
+
+```
+tinygo build -target=wasip2 -o player.wasm --wit-package ../abi/csil:arena.wasm --wit-world arena-player -no-debug .
+```
 
 ## Running the Game
 

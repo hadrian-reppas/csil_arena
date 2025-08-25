@@ -8,5 +8,8 @@ interface api {
 }
 
 world arena-player {
+  // needed for go
+  // include wasi:cli/imports@0.2.0;
+
   export api;
 }

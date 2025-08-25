@@ -59,21 +59,3 @@ fn score_color(board: &[[Cell; 16]; 16], color: Color) -> u32 {
     }
     count
 }
-
-/* players/rr.wasm
-
-pub struct Player {
-    move_number: u64,
-}
-
-impl Player {
-    pub fn new(_: &[[Cell; 16]; 16]) -> Self {
-        Player { move_number: 0 }
-    }
-
-    pub fn play(&mut self, _: &[[Cell; 16]; 16]) -> Color {
-        self.move_number += 1;
-        Color::from_u8(self.move_number as u8 % 8).unwrap()
-    }
-}
-*/

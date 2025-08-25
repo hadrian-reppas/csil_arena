@@ -78,6 +78,7 @@ impl Player {
             },
         );
 
+        store.set_fuel(10_000_000)?; // Go needs fuel to initialize
         let instance = ArenaPlayer::instantiate(&mut store, &component, &linker)?;
 
         Ok(Self {
